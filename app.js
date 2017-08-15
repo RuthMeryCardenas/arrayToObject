@@ -4,7 +4,7 @@
 function arrayToObject(array2d) {
   var newObject = {};
 
-  for (var i = 0; i < array2d.length; i++){
+  for (var i = 0; i < array2d.length; i++) {
     newObject[array2d[i][0]] = array2d[i][1];
   }
 
