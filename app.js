@@ -1,19 +1,16 @@
 /*ARRAY TO OBJECT*/
 
-/* Solución 1: Usando método "reduce()" */
-var myArray = [['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]]; //Arreglo bidimensional
+/* SOLUCIÓN 1 "Usando método array.reduce()" */
 
-var myObject = myArray.reduce(function(obj, element) {
+//Paso 1: Convertir a objeto
+var array2d = [['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]]; //Arreglo bidimensional
+
+var myObject = array2d.reduce(function(obj, element) {
   obj[element[0]] = element[1];
-
   return obj;
 }, {});
 
-//Mostrar en consola
-  // console.log(myObject);
-  // document.write(myObject);
-  document.write(showObject (myObject));
-  
+//Paso 2: Mostrar en pantalla
 function showObject (myObject){
   var result = "{<br>";
   for (var element in myObject)
@@ -22,3 +19,5 @@ function showObject (myObject){
   }
   return result + "}";
 }
+
+document.write(showObject (myObject));
