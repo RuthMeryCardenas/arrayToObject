@@ -16,6 +16,6 @@ function objectToArray(obj) {
 
 // Paso 2: Mostrar resultados en consola
 console.log('Input: Objeto a convertir');
-console.log({name : 'Juan Pérez', age : 25, profession : 'Full stack developer'});
+console.log({name: 'Juan Pérez', age: 25, profession: 'Full stack developer'});
 console.log('Output: Nuevo arreglo bidimensional');
-console.log(objectToArray({name : 'Juan Pérez', age : 25, profession : 'Full stack developer'}));
+console.log(objectToArray({name: 'Juan Pérez', age: 25, profession: 'Full stack developer'}));
