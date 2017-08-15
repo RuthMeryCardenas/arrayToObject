@@ -1,18 +1,21 @@
-// ARRAY TO OBJECT
+// OBJECT TO ARRAY
 
-// Paso 1: Convertir a objeto
-function arrayToObject(array2d) {
-  var newObject = {};
+// Paso 1: Convertir a array
+function objectToArray(obj) {
+  var array2d = [];
 
-  for (var i = 0; i < array2d.length; i++) {
-    newObject[array2d[i][0]] = array2d[i][1];
+  arrayKeys = Object.keys(obj);
+  arrayValues = Object.values(obj);
+
+  for (var i = 0; i < arrayKeys.length; i++) {
+    array2d.push([arrayKeys[i], arrayValues[i]]);
   }
 
-  return newObject;
+  return array2d;
 }
 
 // Paso 2: Mostrar resultados en consola
-console.log('Input: Arreglo bidimensional a convertir');
-console.log([['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]]);
-console.log('Output: Nuevo objeto creado');
-console.log(arrayToObject([['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]]));
+console.log('Input: Objeto a convertir');
+console.log({name : 'Juan Pérez', age : 25, profession : 'Full stack developer'});
+console.log('Output: Nuevo arreglo bidimensional');
+console.log(objectToArray({name : 'Juan Pérez', age : 25, profession : 'Full stack developer'}));
