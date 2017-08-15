@@ -1,23 +1,22 @@
 /*ARRAY TO OBJECT*/
 
-/* SOLUCIÓN 1 "Usando método array.reduce()" */
+//Paso 1: Establecer valores en un arreglo bidimensional
+var array2d = [['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]];
 
-//Paso 1: Convertir a objeto
-var array2d = [['make', 'Ford'], ['model', 'Mustang'], ['year', 1964]]; //Arreglo bidimensional
-
-var myObject = array2d.reduce(function(obj, element) {
-  obj[element[0]] = element[1];
-  return obj;
-}, {});
-
-//Paso 2: Mostrar en pantalla
-function showObject (myObject){
-  var result = "{<br>";
-  for (var element in myObject)
-  {
-    result += element + ": " + myObject[element]+"<br>";
+//Paso 2: Convertir a objeto
+function convertToObject(myArray2d) {
+  var newObject = {};
+  var limit = myArray2d.length;
+  
+  for (var i = 0; i < limit; ++i){
+    newObject[myArray2d[i][0]] = myArray2d[i][1];
   }
-  return result + "}";
+  return newObject;
 }
 
-document.write(showObject (myObject));
+//Paso 3: Mostrar resultados en consola
+console.log("Input: Arreglo bidimensional a convertir");
+console.log(array2d);
+
+console.log("Output: Nuevo objeto creado");
+console.log(convertToObject(array2d));
