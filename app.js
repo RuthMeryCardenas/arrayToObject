@@ -2,11 +2,10 @@
 
 // Paso 1: Convertir a objeto
 function arrayToObject(array2d) {
-  var newObject = {};
-
-  for (var i = 0; i < array2d.length; i++) {
-    newObject[array2d[i][0]] = array2d[i][1];
-  }
+  var newObject = array2d.reduce(function(obj, element) {
+    obj[element[0]] = element[1];
+    return obj;
+  }, {});
 
   return newObject;
 }
