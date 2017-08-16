@@ -5,10 +5,9 @@ function objectToArray(obj) {
   var array2d = [];
 
   arrayKeys = Object.keys(obj);
-  arrayValues = Object.values(obj);
 
   for (var i = 0; i < arrayKeys.length; i++) {
-    array2d.push([arrayKeys[i], arrayValues[i]]);
+    array2d.push([arrayKeys[i], obj[arrayKeys[i]]]);
   }
 
   return array2d;
